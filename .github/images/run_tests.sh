@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# bundle install
-
 # wait for postgres
 until PGPASSWORD=$PGPASS psql -h "$PGHOST" -U $PGUSER -c '\q'; do
   >&2 echo "Postgres is unavailable - sleeping"
